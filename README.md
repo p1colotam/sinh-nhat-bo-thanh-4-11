@@ -4,8 +4,8 @@ Website sinh nhật dành tặng bố Nguyễn Chí Thanh ngày 04/11.
 
 ## GitHub Pages
 
-Kho mã nguồn dự kiến: `p1colotam/sinh-nhat-bo-thanh-4-11`.
-Sau khi đẩy nhánh `main`, vào **Settings → Pages → Build and deployment** và chọn **GitHub Actions**. Workflow sẽ tự xây dựng và xuất bản trang tại `https://p1colotam.github.io/sinh-nhat-bo-thanh-4-11/`.
+Kho mã nguồn: `p1colotam/sinh-nhat-bo-thanh-4-11`.
+Trang đã xuất bản tại `https://p1colotam.github.io/sinh-nhat-bo-thanh-4-11/`. Mỗi lần đẩy thay đổi lên nhánh `main`, GitHub Actions sẽ tự xây dựng và cập nhật trang.
 
 ## Chạy trên máy
 
@@ -17,7 +17,7 @@ npm run dev
 ## Thêm nội dung cá nhân
 
 1. Đặt ảnh gia đình trong `public/media/`.
-2. Mở `src/content.js` và điền đường dẫn ảnh ở các mục `memories` (ví dụ `/media/anh-gia-dinh.jpg`).
+2. Mở `src/content.js` và dùng đường dẫn tương đối qua `mediaUrl` (ví dụ `mediaUrl('media/anh-gia-dinh.jpg')`).
 3. Chạy `npm run build` để kiểm tra trước khi cập nhật bản xuất bản.
 
 ## Nhạc nền
