@@ -314,3 +314,24 @@ body { min-width: 0; }
   .album__book--turn-next, .album__book--turn-previous { animation: none; }
   .album__progress span { transition: none; }
 }
+
+/* Keep the letter border attached to its full content while the modal scrolls. */
+.modal--letter { padding: 8px; }
+.modal--letter::before { content: none; }
+.letter-frame {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px dashed #cbb98c;
+  border-radius: 10px;
+  padding: 40px clamp(18px, 5vw, 42px) 32px;
+}
+.wish p:not(.wish__salutation):not(.wish__signature),
+.modal--letter .letter-body p:not(:first-child) {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+}
+@media (max-width: 600px) {
+  .modal--letter { padding: 8px; }
+  .letter-frame { padding: 40px 18px 24px; }
+}
