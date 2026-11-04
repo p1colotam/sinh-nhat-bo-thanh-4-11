@@ -1,0 +1,188 @@
+.flip-album {
+  width: 100%;
+  max-width: 900px;
+  margin: 42px auto 0;
+}
+.flip-album__stage {
+  width: min(100%, 840px);
+  margin: 0 auto;
+  filter: drop-shadow(0 19px 22px rgba(75, 64, 43, .17));
+}
+.flip-album__book { margin: 0 auto; }
+.flip-album__sheet {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fffaf0;
+  box-shadow: inset 0 0 0 1px #d4c6a8;
+}
+.flip-album__sheet--cover {
+  padding: 24px;
+  border: 8px solid #405b45;
+  border-radius: 8px 17px 17px 8px;
+  background: radial-gradient(circle at 68% 19%, rgba(213,190,130,.15), transparent 43%), linear-gradient(135deg, #3e5b48, #294737);
+  box-shadow: inset 8px 0 11px rgba(20,38,27,.26), 8px 8px 0 #d2bf98;
+  color: #f3e4c4;
+}
+.flip-album__sheet--back-cover { border-radius: 17px 8px 8px 17px; }
+.flip-album__cover-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 18px;
+  border: 1px solid rgba(232,205,148,.68);
+  outline: 1px solid rgba(232,205,148,.24);
+  outline-offset: -9px;
+  text-align: center;
+}
+.flip-album__cover-date { color: #dfca98; font-size: 10px; font-weight: 700; letter-spacing: .18em; }
+.flip-album__cover-flourish { margin: 15px 0 4px; color: #e6cb91; font-family: Georgia, serif; font-size: 43px; line-height: 1; }
+.flip-album__cover-frame strong { color: #fff1cf; font-family: 'Baloo 2', sans-serif; font-size: clamp(41px, 5vw, 62px); line-height: .98; letter-spacing: -.04em; }
+.flip-album__cover-rule { width: 66px; height: 1px; margin: 21px 0 18px; background: #ceb883; }
+.flip-album__cover-subtitle { max-width: 230px; color: #e7d8b5; font-family: 'Lora', Georgia, serif; font-size: 13px; font-style: italic; line-height: 1.5; }
+.flip-album__cover-hint { margin-top: 27px; padding: 8px 13px; border: 1px solid rgba(232,207,155,.6); border-radius: 99px; color: #fff3d8; font-size: 10px; font-weight: 700; }
+.flip-album__cover-hint span { padding-left: 5px; font-size: 14px; }
+
+.flip-album__sheet--memory {
+  padding: 20px 22px 16px;
+  border: 1px solid #d6c8aa;
+  background: radial-gradient(circle at 92% 8%, #fffdf6, transparent 42%), #fbf5e8;
+}
+.flip-album__page-layout { display: flex; flex-direction: column; width: 100%; height: 100%; }
+.flip-album__page-top,
+.flip-album__page-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  gap: 8px;
+  color: #a48960;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+.flip-album__page-top { padding-bottom: 9px; border-bottom: 1px solid #dcccad; }
+.flip-album__page-bottom { padding-top: 9px; border-top: 1px solid #dcccad; font-family: 'Lora', Georgia, serif; font-size: 10px; font-weight: 400; font-style: italic; letter-spacing: 0; }
+.flip-album__page-bottom span:last-child { color: #c68783; font-size: 17px; font-style: normal; line-height: 1; }
+.flip-album__memory {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 12px 0 8px;
+  overflow: hidden;
+}
+.flip-album__photo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+  flex: 0 0 calc(55% + 30px);
+  height: calc(55% + 30px);
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #95734f;
+  cursor: zoom-in;
+}
+.flip-album__photo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 16px);
+  max-height: calc(100% - 30px);
+  padding: 7px;
+  background: #fffdf8;
+  box-shadow: 0 7px 17px rgba(77,67,51,.15);
+  object-fit: contain;
+}
+.flip-album__photo-button > span {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.flip-album__photo-button:hover > span { color: #40583e; }
+.flip-album__photo-button > span span { margin-left: 3px; font-size: 14px; }
+.flip-album__caption {
+  flex: 1 1 0;
+  width: 100%;
+  min-height: 0;
+  margin-top: 8px;
+  padding: 7px 5px 4px 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: #cbb994 transparent;
+  border-top: 1px solid #e3d5b9;
+  color: #52644e;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 11.5px;
+  line-height: 1.55;
+  text-align: left;
+}
+.flip-album__caption:focus-visible { outline: 2px solid #a48256; outline-offset: -2px; }
+.flip-album__caption p { margin: 0; overflow-wrap: anywhere; }
+.flip-album__caption--medium { font-size: 13px; line-height: 1.6; }
+.flip-album__caption--short { font-size: 14.5px; line-height: 1.65; }
+
+.flip-album__controls { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 4vw, 38px); margin: 20px auto 0; }
+.flip-album__controls button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 128px; min-height: 43px; padding: 0 14px; border: 1px solid #b4b798; border-radius: 99px; background: #fff9eb; color: #40583e; font-size: 11px; font-weight: 700; box-shadow: 0 4px 0 #d0c09d; }
+.flip-album__controls button:hover:not(:disabled) { background: #fffdf6; transform: translateY(-2px); }
+.flip-album__controls button:disabled { opacity: .4; cursor: default; }
+.flip-album__controls button span[aria-hidden] { font-size: 18px; font-weight: 400; }
+.flip-album__status { min-width: 99px; color: #8e7c5a; font-size: 12px; text-align: center; white-space: nowrap; }
+.flip-album__status strong { color: #40583e; font-family: 'Lora', Georgia, serif; font-size: 19px; }
+.flip-album__status span { font-size: 12px; }
+.flip-album__progress { height: 3px; margin-top: 7px; overflow: hidden; border-radius: 10px; background: #d9c8a6; }
+.flip-album__progress span { display: block; height: 100%; background: #67805f; transition: width .3s ease; }
+.flip-album__hint { max-width: 680px; margin: 13px auto 0; color: #8b8d79; font-size: 10px; line-height: 1.55; text-align: center; }
+.flip-album__backdrop { position: fixed; z-index: 30; inset: 0; display: grid; place-items: center; padding: 16px; background: rgba(34,49,33,.68); backdrop-filter: blur(6px); }
+.flip-album__dialog--image { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: min(96vw, 1180px); max-height: 94dvh; padding: 18px 20px 21px; border: 1px solid rgba(255,244,215,.45); border-radius: 13px; background: #213227; box-shadow: 0 28px 70px rgba(14,24,16,.45); color: #fff2d9; }
+.flip-album__dialog-close { position: absolute; z-index: 2; top: 8px; right: 9px; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #fff5e5; color: #40583e; font-size: 25px; line-height: 1; }
+.flip-album__dialog--image h3 { margin: 0 45px 12px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-align: center; }
+.flip-album__dialog--image img { display: block; max-width: 100%; max-height: calc(94dvh - 70px); width: auto; height: auto; object-fit: contain; }
+
+@media (max-width: 700px) {
+  .flip-album { margin-top: 30px; }
+  .flip-album__stage { width: min(100%, 320px, 51dvh); }
+  .flip-album__sheet--cover { padding: 15px; border-width: 6px; }
+  .flip-album__cover-frame { padding: 13px; }
+  .flip-album__cover-frame strong { font-size: clamp(37px, 11vw, 50px); }
+  .flip-album__cover-flourish { margin-top: 8px; font-size: 36px; }
+  .flip-album__cover-rule { margin: 15px 0 13px; }
+  .flip-album__cover-subtitle { font-size: 11px; }
+  .flip-album__cover-hint { margin-top: 18px; font-size: 9px; }
+  .flip-album__sheet--memory { padding: 13px 14px 11px; }
+  .flip-album__page-top { font-size: 7px; padding-bottom: 6px; }
+  .flip-album__page-bottom { font-size: 8px; padding-top: 6px; }
+  .flip-album__memory { padding: 8px 0 6px; }
+  .flip-album__photo-button { gap: 9px; flex-basis: calc(59% + 25px); height: calc(59% + 25px); }
+  .flip-album__photo { max-height: calc(100% - 25px); padding: 6px; }
+  .flip-album__photo-button > span { font-size: 9px; }
+  .flip-album__caption { margin-top: 6px; padding-top: 5px; font-size: 10.5px; line-height: 1.48; }
+  .flip-album__caption--medium { font-size: 12px; line-height: 1.52; }
+  .flip-album__caption--short { font-size: 13px; line-height: 1.55; }
+  .flip-album__controls { justify-content: space-between; gap: 10px; margin-top: 15px; }
+  .flip-album__controls button { min-width: 45px; min-height: 42px; padding: 0 11px; }
+  .flip-album__controls button span:not([aria-hidden]) { display: none; }
+  .flip-album__status { min-width: 78px; }
+  .flip-album__status strong { font-size: 16px; }
+  .flip-album__hint { max-width: 320px; font-size: 10px; }
+  .flip-album__dialog--image { width: min(96vw, 1180px); max-height: 96dvh; padding: 17px 9px 10px; }
+  .flip-album__dialog--image img { max-height: calc(96dvh - 58px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-album__progress span,
+  .flip-album__controls button { transition: none; }
+}
