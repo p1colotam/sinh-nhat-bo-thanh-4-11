@@ -163,7 +163,7 @@ function App() {
     </main>}
 
     {modal && <div className="modal-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) closeModal(); }}><div className={`modal ${modal === 'letter' ? 'modal--letter' : ''}`} role="dialog" aria-modal="true" aria-labelledby="modal-title"><button className="modal__close" onClick={closeModal} aria-label="Đóng cửa sổ">×</button>
-      {modal === 'letter' && <div className="letter-frame"><span className="eyebrow">✦ LÁ THƯ TỪ MOSCOW ✦</span><h2 id="modal-title">Gửi bố, từ Moscow thân thương!</h2><div className="letter-body">
+      {modal === 'letter' && <div className="letter-frame"><span className="eyebrow">✦ LÁ THƯ TỪ MOSCOW ✦</span><h2 id="modal-title">Gửi bố, từ Moscow thân thương💗</h2><div className="letter-body">
         <p>Bố à,</p>
         <p>Không biết ở nhà hôm nay bố đang làm gì nhỉ? Còn ở Moscow, con đang ngồi viết những dòng này, ngoài cửa sổ có lẽ trời lại lạnh thêm một chút. Thành phố này rộng lớn, có rất nhiều điều mới mẻ để khám phá, nhưng đôi khi giữa những con phố xa lạ, con vẫn bất chợt nhớ về căn nhà nhỏ của mình, nhớ những bữa cơm gia đình và nhớ cả những điều bình dị mà trước đây con vốn nghĩ là hiển nhiên.</p>
         <p>Ngày trước, con luôn nghĩ rằng đi xa đơn giản là được đến một nơi mới, học hỏi những điều mới và tự mình trải nghiệm cuộc sống. Nhưng đến khi thực sự sống cách nhà hàng nghìn cây số, con mới hiểu rằng phía sau mỗi chuyến đi luôn có một nơi để trở về, và phía sau sự trưởng thành của con luôn có bóng dáng của bố mẹ.</p>
